@@ -6,6 +6,14 @@
 *
 * Contexts
 */
+
+
+/*      */
+.Cen{
+	display: flex;
+	justify-content: center;
+}
+/*      */
 a:focus,
 button:focus {
 	outline: none !important;
