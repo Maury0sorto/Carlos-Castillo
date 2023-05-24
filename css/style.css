@@ -125,6 +125,8 @@ h1, h2, h3, h4, h5, h6, [class*='heading-'] {
 	font-family: "Mangaba", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	letter-spacing: .05em;
 	color: #151515;
+
+	
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, [class*='heading-'] a {
@@ -238,6 +240,7 @@ h5,
 	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	line-height: 1.3;
 	letter-spacing: 0;
+	
 }
 
 @media (min-width: 768px) {
@@ -583,6 +586,9 @@ a[href*='tel'], a[href*='mailto'] {
 	z-index: 1;
 }
 
+
+
+
 .box-icon-ruby::before, .box-icon-ruby::after {
 	position: absolute;
 	content: '';
@@ -603,7 +609,7 @@ a[href*='tel'], a[href*='mailto'] {
 	right: 14px;
 	bottom: 14px;
 	left: 14px;
-	background: #aa6c39;
+	background: #a57650;
 	visibility: hidden;
 	opacity: 0;
 	transition: all .3s ease;
@@ -627,7 +633,7 @@ html .box-icon-ruby-body > * {
 }
 
 .box-icon-ruby-title {
-	color: #aa6c39;
+	color: #151515;
 }
 
 .box-icon-ruby-title a {
@@ -647,10 +653,14 @@ html .box-icon-ruby-body > * {
 	letter-spacing: .075em;
 }
 
+
+
 .box-icon-ruby-text,
 .box-icon-ruby-icon {
 	transition: all .2s ease-in-out;
 }
+
+
 
 @media (min-width: 992px) {
 	.desktop .box-icon-ruby:hover {
@@ -4479,6 +4489,8 @@ textarea.textarea-lg {
 *
 * Headings
 */
+
+
 .title-modern {
 	letter-spacing: .05em;
 }
@@ -12278,718 +12290,211 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 
 
-
 /* Estilos para la Galerias*/
 
-.quote-jean {
+
+.box-icon-ruby2 {
 	position: relative;
-	max-width: 520px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 10px;
-	background-image: url(../images/quote-jean.png);
-	background-repeat: no-repeat;
-	background-position: 50% 0;
-}
-
-* + .quote-jean {
-	margin-top: 16px;
-}
-
-.quote-jean + .isotope-filters {
-	margin-top: 35px;
-}
-
-
-
-
-
-.isotope-filters .isotope-filters-toggle .icon {
-	top: -2px;
-	transition: transform .2s ease;
-}
-
-.isotope-filters .isotope-filters-toggle.button-icon-right .icon {
-	margin-left: 8px;
-	padding-left: 0;
-}
-
-.isotope-filters .isotope-filters-toggle.active .icon {
-	transform: rotate(-180deg);
-}
-
-[class*='isotope-filters-list'] {
-	position: absolute;
-	top: calc(100% + 20px);
-	left: 50%;
-	max-width: 280px;
-	width: 100%;
-	padding: 20px;
-	font-size: 18px;
-	line-height: 1;
-	font-weight: 500;
-	letter-spacing: .1em;
-	text-transform: uppercase;
-	font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	color: #9b9b9b;
-	background: #ffffff;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
-	transform: translate3d(-50%, 0, 0);
-	opacity: 0;
-	visibility: hidden;
-	transition: all .3s ease-in-out;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 22px;
+	min-height: 100%;
+	background-color: #333;
+	border: 1px solid #d7d7d7;
+	transition: all .2s ease;
 	z-index: 1;
 }
 
-[class*='isotope-filters-list'].active {
-	opacity: 1;
-	visibility: visible;
-}
-
-[class*='isotope-filters-list'] a {
-	display: block;
-	padding: 9px 5px 5px;
-}
-
-[class*='isotope-filters-list'] a, [class*='isotope-filters-list'] a:focus, [class*='isotope-filters-list'] a:active {
-	color: inherit;
-}
-
-[class*='isotope-filters-list'] a:hover {
-	color: #ffffff;
-}
-
-[class*='isotope-filters-list'] a:hover {
-	color: #eb6e6e;
-}
-
-[class*='isotope-filters-list'] a.active {
-	color: #ffffff;
-	background: #eb6e6e;
-}
-
-@media (min-width: 768px) {
-	.isotope-filters {
-		overflow: hidden;
-	}
-	[class*='isotope-filters-list'] {
-		position: static;
-		text-align: center;
-		max-width: none;
-		top: auto;
-		left: auto;
-		width: auto;
-		padding: 0;
-		box-shadow: none;
-		background: transparent;
-		transform: none;
-		visibility: visible;
-		opacity: 1;
-	}
-	.isotope-filters-list {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-left: -21px;
-		margin-right: -21px;
-		margin-bottom: -5px;
-	}
-	.isotope-filters-list > * {
-		margin-bottom: 5px;
-	}
-	.isotope-filters-list > li {
-		position: relative;
-		padding: 0 24px;
-	}
-	.isotope-filters-list > li + li::before {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: -2px;
-		height: 15px;
-		width: 1px;
-		background: #d7d7d7;
-	}
-	.isotope-filters-list a {
-		display: inline;
-		padding: 0;
-	}
-	.isotope-filters-list a, .isotope-filters-list a:focus, .isotope-filters-list a:active {
-		color: inherit;
-	}
-	.isotope-filters-list a:hover {
-		color: #eb6e6e;
-	}
-	.isotope-filters-list a.active {
-		color: #eb6e6e;
-		background: transparent;
-	}
-	.isotope-filters-list-2 a, .isotope-filters-list-2 a:focus, .isotope-filters-list-2 a:active {
-		color: inherit;
-	}
-	.isotope-filters-list-2 a:hover {
-		color: #50ba87;
-	}
-	.isotope-filters-list-2 a.active {
-		color: #50ba87;
-	}
-	.isotope-filters .isotope-filters-toggle {
-		display: none;
-	}
-	.isotope-filters-list-classic {
-		text-align: right;
-		font-size: 16px;
-		letter-spacing: .075em;
-		margin-bottom: -10px;
-		margin-left: -8px;
-	}
-	.isotope-filters-list-classic:empty {
-		margin-bottom: 0;
-		margin-left: 0;
-	}
-	.isotope-filters-list-classic > * {
-		display: inline-block;
-		margin-top: 0;
-		margin-bottom: 10px;
-		margin-left: 8px;
-	}
-	.isotope-filters-list-classic li a {
-		position: relative;
-		text-align: center;
-		padding: 13px 14px 8px;
-		color: #151515;
-		border: 2px solid #151515;
-	}
-	.isotope-filters-list-classic li a::before, .isotope-filters-list-classic li a::after {
-		position: absolute;
-		content: '';
-		top: -2px;
-		right: -2px;
-		bottom: -2px;
-		left: -2px;
-		border: 2px solid transparent;
-		transition: color .2s ease-in-out, transform .3s ease;
-		will-change: transform;
-	}
-	.isotope-filters-list-classic li a::before {
-		transform: scaleX(0);
-	}
-	.isotope-filters-list-classic li a::after {
-		transform: scaleY(0);
-	}
-	.isotope-filters-list-classic li a:hover, .isotope-filters-list-classic li a.active {
-		color: #50ba87;
-		background: transparent;
-		border-color: transparent;
-	}
-	.isotope-filters-list-classic li a:hover::before, .isotope-filters-list-classic li a:hover::after, .isotope-filters-list-classic li a.active::before, .isotope-filters-list-classic li a.active::after {
-		transform: none;
-	}
-	.isotope-filters-list-classic li a:hover::before, .isotope-filters-list-classic li a.active::before {
-		border-color: #50ba87 transparent #50ba87 transparent;
-	}
-	.isotope-filters-list-classic li a:hover::after, .isotope-filters-list-classic li a.active::after {
-		border-color: transparent #50ba87 transparent #50ba87;
-	}
-}
-
-@media (min-width: 992px) {
-	.isotope-filters-list-classic li a {
-		min-width: 158px;
-	}
-}
 
 
 
-
-
-
-
-
-.isotope-filters .isotope-filters-toggle .icon {
-	top: -2px;
-	transition: transform .2s ease;
-}
-
-.isotope-filters .isotope-filters-toggle.button-icon-right .icon {
-	margin-left: 8px;
-	padding-left: 0;
-}
-
-.isotope-filters .isotope-filters-toggle.active .icon {
-	transform: rotate(-180deg);
-}
-
-[class*='isotope-filters-list'] {
+.box-icon-ruby2::before, .box-icon-ruby2::after {
 	position: absolute;
-	top: calc(100% + 20px);
-	left: 50%;
-	max-width: 280px;
-	width: 100%;
-	padding: 20px;
-	font-size: 18px;
-	line-height: 1;
-	font-weight: 500;
-	letter-spacing: .1em;
-	text-transform: uppercase;
-	font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	color: #9b9b9b;
-	background: #ffffff;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
-	transform: translate3d(-50%, 0, 0);
-	opacity: 0;
-	visibility: hidden;
+	content: '';
+}
+
+.box-icon-ruby2::before {
+	top: 6px;
+	right: 6px;
+	bottom: 6px;
+	left: 6px;
+	border: 1px solid #d7d7d7;
 	transition: all .3s ease-in-out;
-	z-index: 1;
+	z-index: -1;
 }
 
-[class*='isotope-filters-list'].active {
-	opacity: 1;
-	visibility: visible;
+.box-icon-ruby2::after {
+	top: 14px;
+	right: 14px;
+	bottom: 14px;
+	left: 14px;
+	background: #a57650;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: -2;
 }
 
-[class*='isotope-filters-list'] a {
-	display: block;
-	padding: 9px 5px 5px;
+html .box-icon-ruby-body2 {
+	margin-bottom: -30px;
+	margin-left: -11px;
 }
 
-[class*='isotope-filters-list'] a, [class*='isotope-filters-list'] a:focus, [class*='isotope-filters-list'] a:active {
+html .box-icon-ruby-body2 > * {
+	margin-bottom: 30px;
+	margin-left: 11px;
+}
+
+.box-icon-ruby-icon2 {
+	font-size: 48px;
+	line-height: 1;
+	color: #151515;
+}
+
+.box-icon-ruby-title2 {
+	color: #151515;
+}
+
+.box-icon-ruby-title2 a {
+	transition-duration: .2s;
+}
+
+.box-icon-ruby-title2 a, .box-icon-ruby-title2 a:focus, .box-icon-ruby-title2 a:active {
 	color: inherit;
 }
 
-[class*='isotope-filters-list'] a:hover {
-	color: #ffffff;
+.box-icon-ruby-title2 a:hover {
+	color: #eda407;
 }
 
-[class*='isotope-filters-list'] a:hover {
-	color: #eb6e6e;
-}
-
-[class*='isotope-filters-list'] a.active {
-	color: #ffffff;
-	background: #eb6e6e;
-}
-
-@media (min-width: 768px) {
-	.isotope-filters {
-		overflow: hidden;
-	}
-	[class*='isotope-filters-list'] {
-		position: static;
-		text-align: center;
-		max-width: none;
-		top: auto;
-		left: auto;
-		width: auto;
-		padding: 0;
-		box-shadow: none;
-		background: transparent;
-		transform: none;
-		visibility: visible;
-		opacity: 1;
-	}
-	.isotope-filters-list {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-left: -21px;
-		margin-right: -21px;
-		margin-bottom: -5px;
-	}
-	.isotope-filters-list > * {
-		margin-bottom: 5px;
-	}
-	.isotope-filters-list > li {
-		position: relative;
-		padding: 0 24px;
-	}
-	.isotope-filters-list > li + li::before {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: -2px;
-		height: 15px;
-		width: 1px;
-		background: #d7d7d7;
-	}
-	.isotope-filters-list a {
-		display: inline;
-		padding: 0;
-	}
-	.isotope-filters-list a, .isotope-filters-list a:focus, .isotope-filters-list a:active {
-		color: inherit;
-	}
-	.isotope-filters-list a:hover {
-		color: #eb6e6e;
-	}
-	.isotope-filters-list a.active {
-		color: #eb6e6e;
-		background: transparent;
-	}
-	.isotope-filters-list-2 a, .isotope-filters-list-2 a:focus, .isotope-filters-list-2 a:active {
-		color: inherit;
-	}
-	.isotope-filters-list-2 a:hover {
-		color: #50ba87;
-	}
-	.isotope-filters-list-2 a.active {
-		color: #50ba87;
-	}
-	.isotope-filters .isotope-filters-toggle {
-		display: none;
-	}
-	.isotope-filters-list-classic {
-		text-align: right;
-		font-size: 16px;
-		letter-spacing: .075em;
-		margin-bottom: -10px;
-		margin-left: -8px;
-	}
-	.isotope-filters-list-classic:empty {
-		margin-bottom: 0;
-		margin-left: 0;
-	}
-	.isotope-filters-list-classic > * {
-		display: inline-block;
-		margin-top: 0;
-		margin-bottom: 10px;
-		margin-left: 8px;
-	}
-	.isotope-filters-list-classic li a {
-		position: relative;
-		text-align: center;
-		padding: 13px 14px 8px;
-		color: #151515;
-		border: 2px solid #151515;
-	}
-	.isotope-filters-list-classic li a::before, .isotope-filters-list-classic li a::after {
-		position: absolute;
-		content: '';
-		top: -2px;
-		right: -2px;
-		bottom: -2px;
-		left: -2px;
-		border: 2px solid transparent;
-		transition: color .2s ease-in-out, transform .3s ease;
-		will-change: transform;
-	}
-	.isotope-filters-list-classic li a::before {
-		transform: scaleX(0);
-	}
-	.isotope-filters-list-classic li a::after {
-		transform: scaleY(0);
-	}
-	.isotope-filters-list-classic li a:hover, .isotope-filters-list-classic li a.active {
-		color: #50ba87;
-		background: transparent;
-		border-color: transparent;
-	}
-	.isotope-filters-list-classic li a:hover::before, .isotope-filters-list-classic li a:hover::after, .isotope-filters-list-classic li a.active::before, .isotope-filters-list-classic li a.active::after {
-		transform: none;
-	}
-	.isotope-filters-list-classic li a:hover::before, .isotope-filters-list-classic li a.active::before {
-		border-color: #50ba87 transparent #50ba87 transparent;
-	}
-	.isotope-filters-list-classic li a:hover::after, .isotope-filters-list-classic li a.active::after {
-		border-color: transparent #50ba87 transparent #50ba87;
-	}
-}
-
-@media (min-width: 992px) {
-	.isotope-filters-list-classic li a {
-		min-width: 158px;
-	}
+.box-icon-ruby-text2 {
+	color: #9b9b9b;
+	letter-spacing: .075em;
 }
 
 
-.isotope-top-panel * + .isotope-filters {
-	margin-top: 0;
+
+.box-icon-ruby-text2,
+.box-icon-ruby-icon2 {
+	transition: all .2s ease-in-out;
 }
 
 
-/* ************************** */
-.isotope-filters .isotope-filters-toggle .icon {
-	top: -2px;
-	transition: transform .2s ease;
+
+/* ********************************  */
+
+.sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-130px;
+    top:230px;
+    width:210px;
+    z-index: 1100;
+}
+.sticky li{
+    list-style-type:none;
+    background-color:#fff;
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-115px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:#2C3539;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
 }
 
-.isotope-filters .isotope-filters-toggle.button-icon-right .icon {
-	margin-left: 8px;
-	padding-left: 0;
-}
-
-.isotope-filters .isotope-filters-toggle.active .icon {
-	transform: rotate(-180deg);
-}
-
-.isotope-filters .isotope-filters-toggle {
-	display: none;
-}
 
 
 /* ************************** */
 
-.isotope-filters .isotope-filters-toggle .icon {
-	top: -2px;
-	transition: transform .2s ease;
-}
 
-.isotope-filters .isotope-filters-toggle.button-icon-right .icon {
-	margin-left: 8px;
-	padding-left: 0;
-}
+.sidebar {
+	position: fixed;
+	top: 50%; /* Ajusta la posición verticalmente según tus necesidades */
+	right: 0;
+	transform: translateY(-50%);
+	background-color: #f1f1f1;
+	padding: 10px;
+  }
+  
+  .social-link {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #333;
+  }
+  
+  .social-link i {
+	margin-right: 5px;
+  }
 
-.isotope-filters .isotope-filters-toggle.active .icon {
-	transform: rotate(-180deg);
-}
-
-.isotope-filters .isotope-filters-toggle {
-	display: none;
-}
-
-/* ************************** */
-
-[class*='isotope-filters-list'] {
-	position: absolute;
-	top: calc(100% + 20px);
-	left: 50%;
-	max-width: 280px;
-	width: 100%;
-	padding: 20px;
-	font-size: 18px;
-	line-height: 1;
-	font-weight: 500;
-	letter-spacing: .1em;
-	text-transform: uppercase;
-	font-family: "Teko", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	color: #9b9b9b;
-	background: #ffffff;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
-	transform: translate3d(-50%, 0, 0);
-	opacity: 0;
-	visibility: hidden;
-	transition: all .3s ease-in-out;
-	z-index: 1;
-}
-
-[class*='isotope-filters-list'].active {
-	opacity: 1;
-	visibility: visible;
-}
-
-[class*='isotope-filters-list'] a {
+  .social-icons li a {
 	display: block;
-	padding: 9px 5px 5px;
-}
-
-[class*='isotope-filters-list'] a, [class*='isotope-filters-list'] a:focus, [class*='isotope-filters-list'] a:active {
-	color: inherit;
-}
-
-[class*='isotope-filters-list'] a:hover {
-	color: #ffffff;
-}
-
-[class*='isotope-filters-list'] a:hover {
-	color: #eb6e6e;
-}
-
-[class*='isotope-filters-list'] a.active {
-	color: #ffffff;
-	background: #eb6e6e;
-}
-
-@media (min-width: 768px) {
-	.isotope-filters {
-		overflow: hidden;
-	}
-	[class*='isotope-filters-list'] {
-		position: static;
-		text-align: center;
-		max-width: none;
-		top: auto;
-		left: auto;
-		width: auto;
-		padding: 0;
-		box-shadow: none;
-		background: transparent;
-		transform: none;
-		visibility: visible;
-		opacity: 1;
-	}
-	.isotope-filters-list {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-left: -21px;
-		margin-right: -21px;
-		margin-bottom: -5px;
-	}
-	.isotope-filters-list > * {
-		margin-bottom: 5px;
-	}
-	.isotope-filters-list > li {
-		position: relative;
-		padding: 0 24px;
-	}
-	.isotope-filters-list > li + li::before {
-		position: absolute;
-		content: '';
-		top: 0;
-		left: -2px;
-		height: 15px;
-		width: 1px;
-		background: #d7d7d7;
-	}
-	.isotope-filters-list a {
-		display: inline;
-		padding: 0;
-	}
-	.isotope-filters-list a, .isotope-filters-list a:focus, .isotope-filters-list a:active {
-		color: inherit;
-	}
-	.isotope-filters-list a:hover {
-		color: #eb6e6e;
-	}
-	.isotope-filters-list a.active {
-		color: #eb6e6e;
-		background: transparent;
-	}
-	.isotope-filters-list-2 a, .isotope-filters-list-2 a:focus, .isotope-filters-list-2 a:active {
-		color: inherit;
-	}
-	.isotope-filters-list-2 a:hover {
-		color: #50ba87;
-	}
-	.isotope-filters-list-2 a.active {
-		color: #50ba87;
-	}
-	.isotope-filters .isotope-filters-toggle {
-		display: none;
-	}
-	.isotope-filters-list-classic {
-		text-align: right;
-		font-size: 16px;
-		letter-spacing: .075em;
-		margin-bottom: -10px;
-		margin-left: -8px;
-	}
-	.isotope-filters-list-classic:empty {
-		margin-bottom: 0;
-		margin-left: 0;
-	}
-	.isotope-filters-list-classic > * {
-		display: inline-block;
-		margin-top: 0;
-		margin-bottom: 10px;
-		margin-left: 8px;
-	}
-	.isotope-filters-list-classic li a {
-		position: relative;
-		text-align: center;
-		padding: 13px 14px 8px;
-		color: #151515;
-		border: 2px solid #151515;
-	}
-	.isotope-filters-list-classic li a::before, .isotope-filters-list-classic li a::after {
-		position: absolute;
-		content: '';
-		top: -2px;
-		right: -2px;
-		bottom: -2px;
-		left: -2px;
-		border: 2px solid transparent;
-		transition: color .2s ease-in-out, transform .3s ease;
-		will-change: transform;
-	}
-	.isotope-filters-list-classic li a::before {
-		transform: scaleX(0);
-	}
-	.isotope-filters-list-classic li a::after {
-		transform: scaleY(0);
-	}
-	.isotope-filters-list-classic li a:hover, .isotope-filters-list-classic li a.active {
-		color: #50ba87;
-		background: transparent;
-		border-color: transparent;
-	}
-	.isotope-filters-list-classic li a:hover::before, .isotope-filters-list-classic li a:hover::after, .isotope-filters-list-classic li a.active::before, .isotope-filters-list-classic li a.active::after {
-		transform: none;
-	}
-	.isotope-filters-list-classic li a:hover::before, .isotope-filters-list-classic li a.active::before {
-		border-color: #50ba87 transparent #50ba87 transparent;
-	}
-	.isotope-filters-list-classic li a:hover::after, .isotope-filters-list-classic li a.active::after {
-		border-color: transparent #50ba87 transparent #50ba87;
-	}
-}
-
-@media (min-width: 992px) {
-	.isotope-filters-list-classic li a {
-		min-width: 158px;
-	}
-}
-
-.isotope-filters > * {
-	margin-top: 0;
-	vertical-align: middle;
-}
-
-
-
-
-/* ************************************************ */
+	margin-bottom: 10px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	background-color: #333;
+	border-radius: 50%;
+  }
+  @media (max-width: 768px) {
+	.sidebar {
+		right: -100%;
+		width: 80%;
+	  }
+  }
+  
+  /* **************** */
 
  
 
-  
- 
-  .filter-button-group {
-	padding: 15px;
-  }
-  
-  .btn.btn-default {
-	padding: 1rem 0;
-	font-size: 1.7rem;
-	background-color: #147979;
-	border-color: #373739;
-	border-radius: 0;
-  }
-  .btn.btn-default:hover, .btn.btn-default:active, .btn.btn-default:focus, .btn.btn-default.is-checked {
-	background-color: #093737;
-	color: white;
-	border: none;
-	outline: none;
-  }
-  
-  .thumbnail {
-	border-radius: 0px;
-	border: 0px;
-	padding: 0px;
-  }
-  
-  a.pp_play,
-  a.pp_arrow_previous,
-  a.pp_arrow_next,
-  a.pp_close {
-	display: none;
-  }
-  
-  .pp_social .twitter {
-	float: left;
-	width: 60px;
-  }
-  
-  .pp_social .facebook {
-	float: left;
-	margin-left: 15px;
-	width: 80px;
-	overflow: hidden;
-  }
-  
-  .pp_nav {
-	margin-top: 0;
-  }
+.floating-window {
+    position: absolute;
+    bottom: 30px;
+    right: -200px;
+    width: 200px;
+    height: 100px;
+    background-color: #f1f1f1;
+	opacity: 75%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+	color: black;
+	
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	
+}

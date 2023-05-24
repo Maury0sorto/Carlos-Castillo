@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
   
   $(window).resize(function() {
-    lightboxOnResize();
+    lightboxOnResize();S
   
   });
   
