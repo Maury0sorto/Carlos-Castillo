@@ -12383,16 +12383,16 @@ html .box-icon-ruby-body2 > * {
 
 
 
-/* ********************************  */
+/* *********** Para Redes sociales ******************  */
 
 .sticky-container{
-    padding:0px;
-    margin:0px;
+    padding:5px;
+    margin:-40px;
     position:fixed;
     right:-130px;
-    top:230px;
+    top:530px;
     width:210px;
-    z-index: 1100;
+    z-index: 900;
 }
 .sticky li{
     list-style-type:none;
@@ -12408,7 +12408,7 @@ html .box-icon-ruby-body2 > * {
     cursor:pointer;
 }
 .sticky li:hover{
-    margin-left:-115px;
+    margin-left:-15px;
 }
 .sticky li img{
     float:left;
@@ -12431,7 +12431,7 @@ html .box-icon-ruby-body2 > * {
 
 
 
-/* ************************** */
+/* ************** Redes sociales 2********** */
 
 
 .sidebar {
