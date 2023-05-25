@@ -12730,9 +12730,11 @@ html .box-icon-ruby-body2 > * {
 	  
 	  @media (max-width: 768px) {
 		.social-buttons {
-		  bottom: 10px;
-		  top: auto;
-		  transform: none;
+		  position: fixed;
+		  top: 50%;
+		  right: 10px;
+		  transform: translateY(-50%);
+		  bottom: auto;
 		}
 		.social-button::before {
 		  top: 50%;
@@ -12749,4 +12751,3 @@ html .box-icon-ruby-body2 > * {
 		
 		
 	  }
-	  
