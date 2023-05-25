@@ -12639,7 +12639,7 @@ html .box-icon-ruby-body2 > * {
 	top: 0;
 	left: -100%;
 	width: 100%;
-	height: 2px;
+	height: 4px;
 	background-color: goldenrod; /* Cambia el color de la línea animada según tus preferencias */
 	animation: slide 2s infinite;
   }
