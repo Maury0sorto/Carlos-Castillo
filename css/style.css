@@ -12439,7 +12439,7 @@ html .box-icon-ruby-body2 > * {
 	top: 50%; /* Ajusta la posición verticalmente según tus necesidades */
 	right: 0;
 	transform: translateY(-50%);
-	background-color: #f1f1f1;
+	/* background-color: #f1f1f1; */
 	padding: 10px;
   }
   
@@ -12682,7 +12682,7 @@ html .box-icon-ruby-body2 > * {
 	.social-buttons {
 		position: fixed;
 		top: 50%;
-		right: 20px;
+		right: 60px;
 		transform: translateY(-50%);
 		z-index: 9999;
 	  }
