@@ -12652,3 +12652,28 @@ html .box-icon-ruby-body2 > * {
 	  left: 100%;
 	}
   }
+  .gallery {
+	text-align: center;
+  }
+  
+  #mainImage {
+	width: 500px;
+	height: 300px;
+	object-fit: cover;
+	margin-bottom: 15px;
+  }
+  
+  .thumbnails img {
+	width: 100px;
+	height: 70px;
+	object-fit: cover;
+	margin: 15px 5px;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: opacity 0.3s;
+  }
+  
+  .thumbnails img:hover {
+	opacity: 1;
+  }
+  
