@@ -12628,7 +12628,7 @@ html .box-icon-ruby-body2 > * {
 .divider {
 	width: 100%;
 	height: 2px;
-	background-color: #98bf44; /* Cambia el color de fondo según tus preferencias */
+	background-color: black; /* Cambia el color de fondo según tus preferencias */
 	position: relative;
 	overflow: hidden;
   }
@@ -12640,7 +12640,7 @@ html .box-icon-ruby-body2 > * {
 	left: -100%;
 	width: 100%;
 	height: 2px;
-	background-color: #ff0000; /* Cambia el color de la línea animada según tus preferencias */
+	background-color: goldenrod; /* Cambia el color de la línea animada según tus preferencias */
 	animation: slide 2s infinite;
   }
   
