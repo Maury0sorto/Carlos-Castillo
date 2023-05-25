@@ -12627,7 +12627,7 @@ html .box-icon-ruby-body2 > * {
 /* ********** lINEA DIVISORIA ************ */
 .divider {
 	width: 100%;
-	height: 2px;
+	height: 4px;
 	background-color: black; /* Cambia el color de fondo según tus preferencias */
 	position: relative;
 	overflow: hidden;
@@ -12640,7 +12640,7 @@ html .box-icon-ruby-body2 > * {
 	left: -100%;
 	width: 100%;
 	height: 2px;
-	background-color: goldenrod; /* Cambia el color de la línea animada según tus preferencias */
+	background-color: #ff0000; /* Cambia el color de la línea animada según tus preferencias */
 	animation: slide 2s infinite;
   }
   
@@ -12677,3 +12677,76 @@ html .box-icon-ruby-body2 > * {
 	opacity: 1;
   }
   
+
+    /* Redes sociales flotantes */
+	.social-buttons {
+		position: fixed;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+		z-index: 9999;
+	  }
+	  
+	  
+	  .social-button {
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		text-decoration: none;
+		position: relative;
+	  }
+	  
+	  .social-button i {
+		font-size: 20px;
+	  }
+	  
+	  .social-button::before {
+		content: attr(data-tooltip);
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 5px;
+		background-color: #333;
+		color: #fff;
+		font-size: 14px;
+		border-radius: 4px;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s, visibility 0.3s;
+	  }
+	  
+	  .social-button:hover::before {
+		opacity: 1;
+		visibility: visible;
+	  }
+	  
+	  @media (max-width: 768px) {
+		.social-buttons {
+		  bottom: 10px;
+		  top: auto;
+		  transform: none;
+		}
+		.social-button::before {
+		  top: 50%;
+		  bottom: auto;
+		  left: -80px;
+		  transform: translateX(0) translateY(-50%);
+		  transition: none;
+		}
+	  
+		.social-button:active::before {
+		  left: -80px;
+		  transition: opacity 0.3s, visibility 0.3s, left 0.3s;
+		}
+		
+		
+	  }
+	  
