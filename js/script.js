@@ -1,4 +1,9 @@
 "use strict";
+function showImage(imageUrl) {
+	var mainImage = document.getElementById("mainImage");
+	mainImage.src = imageUrl;
+  }
+  
 (function () {
 	// Global variables
 	var userAgent = navigator.userAgent.toLowerCase(),
