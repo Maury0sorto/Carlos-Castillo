@@ -8498,7 +8498,7 @@ html.rd-navbar-fixed-linked .page {
 	width: auto;
 	height: auto;
 	max-width: 200px;
-	max-height: 70px;
+	max-height: 110px; /* Para hacer el bar mas grande */
 }
 
 .rd-navbar-modern.rd-navbar-static .rd-navbar-main-element {
