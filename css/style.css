@@ -12796,3 +12796,72 @@ html .box-icon-ruby-body2 > * {
 		0% { transform: rotate(0deg); }
 		100% { transform: rotate(360deg); }
 	}
+
+
+
+
+	/* Redes en deslizante */
+	.containerbo {
+		position: fixed;
+		bottom: 50px; 	/*  Para hacerlo mas arriba*/
+		right: 20px;	/*  Para hacerlo mas a la izquierda*/
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: flex-end;
+	  }
+	  
+	  .social-link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		margin-right: 80px; /* Ajusta el margen derecho para mover los iconos hacia la izquierda */
+	  }
+	  @keyframes fade-in {
+		from {
+		  opacity: 0;
+		  transform: translateY(10px); /* Puedes ajustar la cantidad de desplazamiento vertical */
+		}
+		to {
+		  opacity: 1;
+		  transform: translateY(0);
+		}
+	  }
+	  
+	  
+	  .social-link i {
+		font-size: 40px;/* Ajusta el tamaño de los iconos según sea necesario */
+		color: white;
+		animation: fade-in 1s ease-out; /* Agregamos la animación fade-in */
+	  
+	  }
+	  
+	  .social-tooltip {
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: none;
+		padding: 5px;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: #fff;
+		font-size: 14px;
+		border-radius: 5px;
+		pointer-events: none;
+	  }
+	  
+	  .social-link:hover .social-tooltip {
+		display: block;
+	  }
+	  
+	  @media screen and (max-width: 768px) {
+		.containerbo {
+		  justify-content: flex-end;
+		}
+	  
+		.social-link {
+		  margin-right: 10px;
+		  margin-bottom: 0;
+		}
+	  }
