@@ -3676,7 +3676,7 @@ textarea.textarea-lg {
 .breadcrumbs-custom-path {
 	margin-left: -15px;
 	margin-right: -15px;
-	font-size: 25px;
+	font-size: 26px;
 	line-height: 1.33;
 }
 
@@ -8467,10 +8467,10 @@ html.rd-navbar-fixed-linked .page {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 1170px;
+	max-width: 1900px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 30px;
+	padding: 0 50px;
 	transition: padding .35s ease-in-out;
 }
 
@@ -8481,7 +8481,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-modern.rd-navbar-static .rd-navbar-nav-wrap {
 	display: flex;
 	align-items: center;
-	margin-right: 16px;
+	margin-right: 50px;
 	transition: all .3s ease;
 }
 
@@ -12644,24 +12644,6 @@ html .box-icon-ruby-body2 > * {
 	animation: slide 2s infinite;
   }
   
-  .divisor {
-	width: 100%;
-	height: 1px;
-	background-color: black; /* Cambia el color de fondo según tus preferencias */
-	position: relative;
-	overflow: hidden;
-  }
-  
-  .divisor::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 1px;
-	background-color: goldenrod; /* Cambia el color de la línea animada según tus preferencias */
-	animation: slide 2s infinite;
-  }
   @keyframes slide {
 	0% {
 	  left: -100%;
