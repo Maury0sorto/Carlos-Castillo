@@ -12644,6 +12644,24 @@ html .box-icon-ruby-body2 > * {
 	animation: slide 2s infinite;
   }
   
+  .divisor {
+	width: 100%;
+	height: 1px;
+	background-color: black; /* Cambia el color de fondo según tus preferencias */
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .divisor::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 1px;
+	background-color: goldenrod; /* Cambia el color de la línea animada según tus preferencias */
+	animation: slide 2s infinite;
+  }
   @keyframes slide {
 	0% {
 	  left: -100%;
