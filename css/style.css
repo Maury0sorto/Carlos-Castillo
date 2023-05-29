@@ -9456,7 +9456,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
-	margin: 0 10px;
+	margin: 0 40px;
 }
 
 .swiper-slide {
@@ -9473,7 +9473,7 @@ html.rd-navbar-fixed-linked .page {
 
 .swiper-slide-caption {
 	width: 100%;
-	white-space: normal;
+	white-space:normal;
 }
 
 @media (max-width: 767px) {
@@ -9556,7 +9556,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .swiper-slider-modern p {
-	font-size: 16px;
+	font-size: 21px; /* Tamanno de letra de swiper */
 	line-height: 1.875;
 	letter-spacing: 0;
 }
