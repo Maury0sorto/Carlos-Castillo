@@ -12876,6 +12876,9 @@ html .box-icon-ruby-body2 > * {
 		}
 	  }
 
+
+	  
+	  /*  Banner inicial  */
 	  .containerbo2 {
 		position: absolute;
 		bottom: -150px; 	/*  Para hacerlo mas arriba*/
@@ -12906,7 +12909,7 @@ html .box-icon-ruby-body2 > * {
 	  
 	  
 	  .social-link2 i {
-		font-size: 80px;/* Ajusta el tamaño de los iconos según sea necesario */
+		font-size: 50px;/* Ajusta el tamaño de los iconos según sea necesario */
 		color: white;
 		animation: fade-in 1s ease-out; /* Agregamos la animación fade-in */
 	  
@@ -12930,20 +12933,56 @@ html .box-icon-ruby-body2 > * {
 		display: block;
 	  }
 	  
-	  @media screen and (max-width: 412px) {
+
+	  @media screen and (max-width: 1599px) {
 		.containerbo2 {
 		  justify-content: center;
-		  
+		  position: absolute;
 		  font-size: 10px;
+		  left: -100px;
+		bottom: -70px;
 		}
 	  
 		.social-link2 i {
 		  position: relative;
-		  font-size: 10px;
+		  font-size: 40px;
 		  
 		}
 	  }
 
+	  
+	  @media screen and (max-width: 1199px) {
+		.containerbo2 {
+		  justify-content: center;
+		  position: absolute;
+		  font-size: 10px;
+		  left: -100px;
+		bottom: -80px;
+		}
+	  
+		.social-link2 i {
+		  position: relative;
+		  font-size: 40px;
+		  
+		}
+	  }
+
+	  @media screen and (max-width: 768px) {
+		.containerbo2 {
+		  justify-content: center;
+		  position: absolute;
+		  font-size: 10px;
+		  left: -100px;
+		}
+	  
+		.social-link2 i {
+		  position: relative;
+		  font-size: 30px;
+		  
+		}
+	  }
+
+	  /*  Banner inicial final */
 	  
 	  @media screen and (max-width: 412px) {
 		.bannerincial {
