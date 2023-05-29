@@ -12772,12 +12772,7 @@ html .box-icon-ruby-body2 > * {
 	  }
 
 
-.coorporativo2{
-	font-size: 20px;
-	font-family: arial black ;
-	
-	;
-}
+
 .coorporativo{
 	font-size: 30px;
 	font-family: arial black ;
@@ -12819,7 +12814,7 @@ html .box-icon-ruby-body2 > * {
 		justify-content: flex-end;
 		align-items: flex-end;
 	  }
-	  
+
 	  .social-link {
 		position: relative;
 		display: flex;
@@ -12839,6 +12834,12 @@ html .box-icon-ruby-body2 > * {
 	  }
 	  
 	  
+	  .social-link i {
+		font-size: 40px;/* Ajusta el tamaño de los iconos según sea necesario */
+		color: white;
+		animation: fade-in 1s ease-out; /* Agregamos la animación fade-in */
+	  
+	  }
 	  .social-link i {
 		font-size: 40px;/* Ajusta el tamaño de los iconos según sea necesario */
 		color: white;
@@ -12874,3 +12875,80 @@ html .box-icon-ruby-body2 > * {
 		  margin-bottom: 0;
 		}
 	  }
+
+	  .containerbo2 {
+		position: absolute;
+		bottom: -150px; 	/*  Para hacerlo mas arriba*/
+		right:-225px;	/*  Para hacerlo mas a la izquierda*/
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: flex-end;
+	  }
+
+	  .social-link2 {
+		position: relative;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		margin-right: 80px; /* Ajusta el margen derecho para mover los iconos hacia la izquierda */
+	  }
+	  @keyframes fade-in {
+		from {
+		  opacity: 0;
+		  transform: translateY(10px); /* Puedes ajustar la cantidad de desplazamiento vertical */
+		}
+		to {
+		  opacity: 1;
+		  transform: translateY(0);
+		}
+	  }
+	  
+	  
+	  .social-link2 i {
+		font-size: 80px;/* Ajusta el tamaño de los iconos según sea necesario */
+		color: white;
+		animation: fade-in 1s ease-out; /* Agregamos la animación fade-in */
+	  
+	  }
+	  
+	  .social-tooltip2 {
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		display: none;
+		padding: 5px;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: #fff;
+		font-size: 14px;
+		border-radius: 5px;
+		pointer-events: none;
+	  }
+	  
+	  .social-lin2k:hover .social-tooltip2 {
+		display: block;
+	  }
+	  
+	  @media screen and (max-width: 412px) {
+		.containerbo2 {
+		  justify-content: center;
+		  
+		  font-size: 10px;
+		}
+	  
+		.social-link2 i {
+		  position: relative;
+		  font-size: 10px;
+		  
+		}
+	  }
+
+	  
+	  @media screen and (max-width: 412px) {
+		.bannerincial {
+			position: relative;
+			right: 20px;
+		  justify-content: center;
+		}
+	}
