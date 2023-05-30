@@ -4455,7 +4455,7 @@ textarea.textarea-lg {
 	margin-top: 4px;
 }
 
-.product-banner {
+.product-banner3 {
 	position: relative;
 	width: 100%;
 	max-width: 245px;
@@ -4469,7 +4469,7 @@ textarea.textarea-lg {
   }
   
   @media screen and (max-width: 767px) {
-	.product-banner  {
+	.product-banner3  {
 		position: relative;
 		width: 100%;
 		max-width: 245px;
@@ -4544,7 +4544,10 @@ textarea.textarea-lg {
 	}
 }
 
+.product-banner {
+	position: relative;
 
+}
 .product-banner-content {
 	position: absolute;
 	left: 0;
