@@ -4457,8 +4457,93 @@ textarea.textarea-lg {
 
 .product-banner {
 	position: relative;
-	
+	width: 100%;
+	max-width: 245px;
+	height: auto;
+	margin-left: -120px;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: translateX(-75%);
+  }
+  
+  @media screen and (max-width: 767px) {
+	.product-banner  {
+		position: relative;
+		width: 100%;
+		max-width: 245px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
+
+
+
+  .product-banner2 {
+	position: relative;
+	width: 170%;
+	max-width: 1000px;
+	height: auto;
+	margin-left: -200px;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: translateX(-50%);
+  }
+
+  @media screen and (max-width: 1199px) {
+	
+	.product-banner2  {
+		position: relative;
+		width: 170%;
+		max-width: 1000px;
+		height: auto;
+		margin-left: -150px;
+		margin-right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	
+	.product-banner2  {
+		position: relative;
+		width: 100%;
+		max-width: 1000px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+  @media screen and (max-width: 575px) {
+	
+	.product-banner2  {
+		position: relative;
+		width: 100%;
+		max-width: 1000px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 
 .product-banner-content {
 	position: absolute;
