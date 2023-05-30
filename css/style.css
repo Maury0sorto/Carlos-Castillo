@@ -12506,9 +12506,9 @@ html .box-icon-ruby-body2 > * {
 
 .floating-window2 {
     position: absolute;
-    bottom: 1775px;/* arriba o abajo */
-    right: 1100px; /* para los lados */
-    width: 350px; /* Ancho de la ventana */
+    bottom: 380px;/* arriba o abajo */
+    right: 175px; /* para los lados */
+    width: 300px; /* Ancho de la ventana */
     height: 70px;  /* grandez de boton */
     background-color: #f1f1f1;
 	opacity: 50%;
@@ -12525,8 +12525,29 @@ html .box-icon-ruby-body2 > * {
     align-items: center;
 	
 }
+@media (max-width: 1199px) {
+	.floating-window2 {
+	  bottom: 22px; /* Ajusta la posición vertical */
+	  right: 20px; /* Ajusta la posición horizontal */
+	  width: 90%; /* Ajusta el ancho */
+	}
+  }
 
+  @media (max-width: 991px) {
+	.floating-window2 {
+		bottom: 22px; /* Ajusta la posición vertical */
+		right: 79px; /* Ajusta la posición horizontal */
+		width: 80%; /* Ajusta el ancho */
+	}
+  }
 
+@media (max-width: 768px) {
+	.floating-window2 {
+	  bottom: 22px; /* Ajusta la posición vertical */
+	  right: 70px; /* Ajusta la posición horizontal */
+	  width: 70%; /* Ajusta el ancho */
+	}
+  }
 
 /* ******************************* */
 /* Estilos generales para los botones */
