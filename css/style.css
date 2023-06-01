@@ -13133,3 +13133,16 @@ html .box-icon-ruby-body2 > * {
 		  justify-content: center;
 		}
 	}
+
+	.bannerincial2{
+		position: relative;
+		bottom: 270px;
+	  }
+	  
+	  @media screen and (max-width: 412px) {
+		.bannerincial2 {
+			position: relative;
+			right: 50px;
+		  justify-content: center;
+		}
+	}
