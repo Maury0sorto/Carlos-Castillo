@@ -13143,6 +13143,13 @@ html .box-icon-ruby-body2 > * {
 		.bannerincial2 {
 			position: relative;
 			right: 50px;
+			bottom: 350px;
 		  justify-content: center;
 		}
 	}
+	.containerbo22 {
+		position: absolute;
+		bottom: 0px; 	/*  Para hacerlo mas arriba*/
+		right:-205px;	/*  Para hacerlo mas a la izquierda*/
+		font-size: 20px;
+	  }
