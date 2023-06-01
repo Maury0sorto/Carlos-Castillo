@@ -13145,11 +13145,24 @@ html .box-icon-ruby-body2 > * {
 			right: 50px;
 			bottom: 350px;
 		  justify-content: center;
+		  font-size: 1px;
 		}
 	}
 	.containerbo22 {
 		position: absolute;
-		bottom: 0px; 	/*  Para hacerlo mas arriba*/
-		right:-205px;	/*  Para hacerlo mas a la izquierda*/
+		bottom: 100px; 	/*  Para hacerlo mas arriba*/
+		left:300px;	/*  Para hacerlo mas a la izquierda*/
 		font-size: 20px;
+		width:1100px;
 	  }
+
+	  @media screen and (max-width: 412px) {
+		.containerbo22 {
+			position: absolute;
+			justify-content: center;
+			left: 20px;
+			bottom: 100px;
+			width: 400px;
+			font-size: 15px;
+		}
+	}
