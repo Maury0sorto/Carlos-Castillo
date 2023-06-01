@@ -12669,16 +12669,16 @@ html .box-icon-ruby-body2 > * {
 	background-color: #ccc;
   }
   
-  @media (max-width: 768px) {
-	
 
-	  .boton {
-		font-size: 14px;
-		padding: 8px 16px;
-	  }
-  }
+  @media (max-width: 1199px) {
+	.boton {
+	  font-size: 16px;
+	  padding: 16px 26px;
+	}
+}
 
-  @media (max-width: 991px) {
+
+@media (max-width: 991px) {
 	
 
 	.boton {
@@ -12686,12 +12686,21 @@ html .box-icon-ruby-body2 > * {
 	  padding: 8px 16px;
 	}
 }
+  @media (max-width: 534px) {
+	  .boton {
+
+		margin-bottom: 5px;
+		font-size: 14px;
+		padding: 6px 16px;
+	  }
+  }
+
 
 @media (max-width: 329px) {
 	
 
 	.boton {
-	  font-size: 11px;
+	  font-size: 10px;
 	  padding: 8px 16px;
 	}
 }
