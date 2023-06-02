@@ -13135,11 +13135,11 @@ html .box-icon-ruby-body2 > * {
 	}
 
 	.bannerincial2{
-		position: relative;
+		position:fixed;
 		
 		justify-content: center;
-		bottom: 270px;
-		left: -300px;
+		bottom: 170px;
+		left: 10px;
 	  }
 	  
 	  @media screen and (max-width: 412px) {
@@ -13152,7 +13152,7 @@ html .box-icon-ruby-body2 > * {
 		}
 	}
 	.containerbo22 {
-		position: absolute;
+		position: fixed;
 		
 		justify-content: center;
 		bottom: 150px; 	/*  Para hacerlo mas arriba*/
