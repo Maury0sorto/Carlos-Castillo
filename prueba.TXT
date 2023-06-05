@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de cambio de idioma</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Asegúrate de incluir Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dropdown">
+    <input type="checkbox" id="language-toggle" class="dropdown-toggle">
+    <label for="language-toggle" class="dropdown-label">Seleccionar idioma</label>
+    <ul class="dropdown-menu" id="language-menu">
+      <li><a href="#" data-lang="en"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png" alt="English Flag"> English</a></li>
+      <li><a href="#" data-lang="es"><img src="path/to/flag-es.png" alt=""> Español</a></li>
+      <li><a href="#" data-lang="zh-CN"><img src="path/to/flag-es.png" alt=""> 中文</a></li>
+    </ul>
+  </div>
+  
+  <div class="translate" id="contenedortraslate">
+    <h1 id="contenido">¡Hola!</h1>
+    <p id="saludo">Este es un ejemplo de cambio de idioma. ¿Cómo estás hoy?</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: none;
+}
+
+.dropdown-label {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding-left: 40px; /* Ajusta el espaciado para la bandera */
+}
+
+.dropdown-label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Ajusta la posición horizontal de la bandera */
+  transform: translateY(-100%);
+  width: 1px; /* Ajusta el ancho de la bandera */
+  height: 3px; /* Ajusta la altura de la bandera */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-toggle:checked + .dropdown-label + .dropdown-menu {
+  display: block;
+}
+
+/* Estilos de las banderas */
+.dropdown-label[data-lang="en"]::before {
+  background-image: url(path/to/flag-en.png);
+}
+
+.dropdown-label[data-lang="es"]::before {
+  background-image: url(path/to/flag-es.png);
+}
+
+.dropdown-label[data-lang="zh-CN"]::before {
+  background-image: url(path/to/flag-zh.png);
+}
+
+
+
+
+// Obtener los elementos del idioma y el contenido
+var languageToggle = document.getElementById('language-toggle');
+var languageMenu = document.getElementById('language-menu');
+var languageLinks = document.querySelectorAll('#language-menu a');
+var contenedoresTraducibles = document.querySelectorAll('.translate');
+var contenidoOriginal = {};
+
+// Guardar los textos originales de los contenedores traducibles
+contenedoresTraducibles.forEach(function(contenedor) {
+  var id = contenedor.id;
+  contenidoOriginal[id] = contenedor.innerHTML;
+});
+
+// Manejar el cambio de idioma al hacer clic en los enlaces del menú
+languageLinks.forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var lang = this.getAttribute('data-lang');
+    cambiarIdioma(lang);
+    closeLanguageMenu();
+  });
+});
+
+// Función para cambiar el idioma y actualizar los textos
+function cambiarIdioma(lang) {
+  if (lang === 'en') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      translateText(contenidoOriginal[id], 'es', 'en', function(translatedText) {
+        document.getElementById(id).innerHTML = translatedText;
+      });
+    });
+  } else if (lang === 'es') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      document.getElementById(id).innerHTML = contenidoOriginal[id];
+    });
+  } else if (lang === 'zh-CN') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      translateText(contenidoOriginal[id], 'es', 'zh-CN', function(translatedText) {
+        document.getElementById(id).innerHTML = translatedText;
+      });
+    });
+  }
+}
+
+// Función para cerrar el menú desplegable
+function closeLanguageMenu() {
+  languageToggle.checked = false;
+}
+
+// Función para traducir el texto de un idioma a otro utilizando la API de Google Translate
+function translateText(text, sourceLang, targetLang, callback) {
+  var apiKey = 'AIzaSyCAmC5j9j0_xS7CSjyI3Tqcy47NqYf3jBI'; // Reemplaza "TU_API_KEY" con tu propia clave de API de Google Translate
+
+  var url = 'https://translation.googleapis.com/language/translate/v2?key=' + apiKey;
+  var data = {
+    q: text,
+    source: sourceLang,
+    target: targetLang
+  };
+
+  $.ajax({
+    url: url,
+    type: 'POST',
+    dataType: 'json',
+    data: data,
+    success: function(response) {
+      var translatedText = response.data.translations[0].translatedText;
+      callback(translatedText);
+    },
+    error: function(error) {
+      console.log('Error de traducción:', error);
+    }
+  });
+}
