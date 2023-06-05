@@ -13171,3 +13171,77 @@ html .box-icon-ruby-body2 > * {
 			font-size: 15px;
 		}
 	}
+
+
+
+
+/* ************************* */
+.dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-toggle {
+	display: none;
+  }
+  
+  .dropdown-label {
+	padding: 10px 20px;
+	background-color: #ccc;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	padding-left: 40px; /* Ajusta el espaciado para la bandera */
+  }
+  
+  .dropdown-label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 10px; /* Ajusta la posición horizontal de la bandera */
+	transform: translateY(-100%);
+	width: 1px; /* Ajusta el ancho de la bandera */
+	height: 3px; /* Ajusta la altura de la bandera */
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+  
+  .dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+	display: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+  }
+  
+  .dropdown-menu li {
+	padding: 8px 16px;
+  }
+  
+  .dropdown-menu li:hover {
+	background-color: #f2f2f2;
+  }
+  
+  .dropdown-toggle:checked + .dropdown-label + .dropdown-menu {
+	display: block;
+  }
+  
+  /* Estilos de las banderas */
+  .dropdown-label[data-lang="en"]::before {
+	background-image: url(path/to/flag-en.png);
+  }
+  
+  .dropdown-label[data-lang="es"]::before {
+	background-image: url(path/to/flag-es.png);
+  }
+  
+  .dropdown-label[data-lang="zh-CN"]::before {
+	background-image: url(path/to/flag-zh.png);
+  }
+  

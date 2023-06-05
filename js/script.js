@@ -3,6 +3,82 @@ function showImage(imageUrl) {
 	var mainImage = document.getElementById("mainImage");
 	mainImage.src = imageUrl;
   }
+
+  // Obtener los elementos del idioma y el contenido
+var languageToggle = document.getElementById('language-toggle');
+var languageMenu = document.getElementById('language-menu');
+var languageLinks = document.querySelectorAll('#language-menu a');
+var contenedoresTraducibles = document.querySelectorAll('.translate');
+var contenidoOriginal = {};
+
+// Guardar los textos originales de los contenedores traducibles
+contenedoresTraducibles.forEach(function(contenedor) {
+  var id = contenedor.id;
+  contenidoOriginal[id] = contenedor.innerHTML;
+});
+
+// Manejar el cambio de idioma al hacer clic en los enlaces del menú
+languageLinks.forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var lang = this.getAttribute('data-lang');
+    cambiarIdioma(lang);
+    closeLanguageMenu();
+  });
+});
+
+// Función para cambiar el idioma y actualizar los textos
+function cambiarIdioma(lang) {
+  if (lang === 'en') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      translateText(contenidoOriginal[id], 'es', 'en', function(translatedText) {
+        document.getElementById(id).innerHTML = translatedText;
+      });
+    });
+  } else if (lang === 'es') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      document.getElementById(id).innerHTML = contenidoOriginal[id];
+    });
+  } else if (lang === 'zh-CN') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      translateText(contenidoOriginal[id], 'es', 'zh-CN', function(translatedText) {
+        document.getElementById(id).innerHTML = translatedText;
+      });
+    });
+  }
+}
+
+// Función para cerrar el menú desplegable
+function closeLanguageMenu() {
+  languageToggle.checked = false;
+}
+
+// Función para traducir el texto de un idioma a otro utilizando la API de Google Translate
+function translateText(text, sourceLang, targetLang, callback) {
+  var apiKey = 'AIzaSyCAmC5j9j0_xS7CSjyI3Tqcy47NqYf3jBI'; // Reemplaza "TU_API_KEY" con tu propia clave de API de Google Translate
+
+  var url = 'https://translation.googleapis.com/language/translate/v2?key=' + apiKey;
+  var data = {
+    q: text,
+    source: sourceLang,
+    target: targetLang
+  };
+
+  $.ajax({
+    url: url,
+    type: 'POST',
+    dataType: 'json',
+    data: data,
+    success: function(response) {
+      var translatedText = response.data.translations[0].translatedText;
+      callback(translatedText);
+    },
+    error: function(error) {
+      console.log('Error de traducción:', error);
+    }
+  });
+}
+
   
 (function () {
 	// Global variables

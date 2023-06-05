@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de cambio de idioma</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Asegúrate de incluir Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dropdown">
+    <input type="checkbox" id="language-toggle" class="dropdown-toggle">
+    <label for="language-toggle" class="dropdown-label">Seleccionar idioma</label>
+    <ul class="dropdown-menu" id="language-menu">
+      <li><a href="#" data-lang="en"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png" alt="English Flag"> English</a></li>
+      <li><a href="#" data-lang="es"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png" alt=""> Español</a></li>
+      <li><a href="#" data-lang="zh-CN"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png" alt=""> 中文</a></li>
+    </ul>
+  </div>
+  
+  <div class="translate" id="contenedortraslate">
+    <h1 id="contenido">¡Hola!</h1>
+    <p id="saludo">Este es un ejemplo de cambio de idioma. ¿Cómo estás hoy?</p>
+  </div>
+
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
