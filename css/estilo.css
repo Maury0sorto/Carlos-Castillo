@@ -11,20 +11,20 @@
 	display: flex;
 	align-items: center;
 	padding: 10px 20px;
-	background-color: #ccc;
+	background-color: #fffafa00;
 	border: none;
 	cursor: pointer;
 	position: relative;
   }
   
   .dropdown-label img {
-	width: 20px;
-	height: 20px;
-	margin-right: 10px;
+	width: 45px;
+	height: 45px;
+	margin-right: 40px;
   }
   
   .dropdown-label span {
-	margin-right: 5px;
+	margin-right: -10px;
   }
   
   .dropdown-menu {
