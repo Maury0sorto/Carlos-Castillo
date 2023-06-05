@@ -5767,12 +5767,12 @@ html [class*='section-'].section-top-0 {
 	right: 0;
 	z-index: 1;
 	height: 26px;
-	background: url("../images/bg-top.png") center center;
+	background: url("../images/bg-top.webp") center center;
 	background-size: cover;
 }
 
 .section-top-image-dark:before {
-	background: url("../images/bg-top-1.png") center center;
+	background: url("../images/bg-top-1.webp") center center;
 }
 
 /*
