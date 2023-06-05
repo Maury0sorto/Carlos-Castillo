@@ -1,31 +1,235 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo de cambio de idioma</title>
-  <link rel="stylesheet" href="css/estilo.css">
-  <!-- Asegúrate de incluir Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-  <div class="dropdown">
-    <input type="checkbox" id="language-toggle" class="dropdown-toggle">
-    <label for="language-toggle" class="dropdown-label">Seleccionar idioma</label>
-    <ul class="dropdown-menu" id="language-menu">
-      <li><a href="#" data-lang="en"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png" alt="English Flag"> English</a></li>
-      <li><a href="#" data-lang="es"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png" alt=""> Español</a></li>
-      <li><a href="#" data-lang="zh-CN"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png" alt=""> 中文</a></li>
-    </ul>
-  </div>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Carlos Castillo Cigars & Co.</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:300,400,500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    </div>
+    
+    <div class="page"> 
+      <header class="section page-header">
+
+
+        
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-modern-wrap">
+          <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="70px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo-default-196x47.webp" alt="" width="196" height="47"/></a></div>
+                  
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    
+                    <!-- RD Navbar Search-->
+                    <div class="rd-navbar-search">
+                      <div class="form-wrap"> 
+                         </div>
+                      </form>
+                    </div>
+                    
+<div class="translate" id="contenedortraslate">
+
+
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="Catalogue.html">Catalogue</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="Gallery.html">Gallery</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  <div class="dropdown">
+                    <input type="checkbox" id="language-toggle" class="dropdown-toggle">
+                    <label for="language-toggle" class="dropdown-label">
+                      <img id="current-flag" src="https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png" alt="English Flag">
+                      <span id="current-language">English</span>
+                    </label>
+                    <ul class="dropdown-menu" id="language-menu">
+                      <li><a href="#" data-lang="en"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png" alt="English Flag"> English</a></li>
+                      <li><a href="#" data-lang="es"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png" alt=""> Español</a></li>
+                      <li><a href="#" data-lang="zh-CN"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png" alt=""> 中文</a></li>
+                    </ul>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
   
-  <div class="translate" id="contenedortraslate">
-    <h1 id="contenido ">¡Hola!</h1>
-    <p id="saludo">Este es un ejemplo de cambio de idioma. ¿Cómo estás hoy?</p>
+
+
+      <div class="translate" id="contenedortraslate3">
+        <h1 id="content">Hello!</h1>
+        <p id="greeting">This is an example of language change. How are you today?</p>
   </div>
 
-  <script src="js/core.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+
+
+  
+ <!-- Page Footer-->
+<footer class="section footer-variant-2 footer-modern context-dark section-top-image section-top-image-dark">
+    <div class="translate" id="contenedortraslate2">
+  <div class="footer-variant-2-content">
+    <div class="container">
+      <div class="row row-40 justify-content-between">
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+              <div class="footer-brand"><a href="index.html"><img src="images/logo-inverse-196x42.webp" alt="" width="196" height="42"/></a></div>
+              <p>Carlos Castillo Cigars & Co. is a company located in Danlí. We offer a diversity of products for people's consumption.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xl-3">
+          <div class="oh-desktop">
+            <div class="footer-contacts d-inline-block d-md-block" data-wow-delay="0s">
+              <h5>Gallery</h5>
+              <div class="row row-10 gutters-10" data-lightgallery="group">
+                <div class="col-6 col-sm-3 col-lg-6">
+                  <!-- Thumbnail Classic-->
+                  <article class="thumbnail thumbnail-mary">
+                    <div class="thumbnail-mary-figure"><img src="images/1.webp" alt="" width="129" height="120"/>
+                    </div>
+                    <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="Gallery.html" ></a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-6">
+                  <!-- Thumbnail Classic-->
+                  <article class="thumbnail thumbnail-mary">
+                    <div class="thumbnail-mary-figure"><img src="images/2.webp" alt="" width="129" height="120"/>
+                    </div>
+                    <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="Gallery.html" ></a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-6">
+                  <!-- Thumbnail Classic-->
+                  <article class="thumbnail thumbnail-mary">
+                    <div class="thumbnail-mary-figure"><img src="images/3.webp" alt="" width="129" height="120"/>
+                    </div>
+                    <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="Gallery.html" ></a>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-6 col-sm-3 col-lg-6">
+                  <!-- Thumbnail Classic-->
+                  <article class="thumbnail thumbnail-mary">
+                    <div class="thumbnail-mary-figure"><img src="images/4.webp" alt="" width="129" height="120"/>
+                    </div>
+                    <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="Gallery.html" ></a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-xl-4">
+          <div class="oh-desktop">
+            
+            <ul class="footer-contacts d-inline-block d-md-block">
+             
+                <li>
+                  <div class="unit unit-spacing-xs">
+                    <div class="unit-left"><span class="icon fa fa-whatsapp"></span></div>
+                    <div class="unit-body"><a class="link-phone" href="https://api.whatsapp.com/send/?phone=50431621010&text=Me+gustar%C3%ADa+saber+el+precio+del+los+puros%3F&type=phone_number&app_absent=0" target="_blank">+504 3362-1010 </a></div>
+                   </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs">
+                      <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                      <div class="unit-body"><a class="link-phone" href="https://api.whatsapp.com/send/?phone=50431621010&text=Me+gustar%C3%ADa+saber+el+precio+del+los+puros%3F&type=phone_number&app_absent=0" target="_blank">+504 3362-1010 </a></div>
+                     </div>
+                    </li>
+              <li>
+                <div class="unit unit-spacing-xs">
+                  <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
+                  <div class="unit-body">
+                    <p>Mon-Fri: 08:00AM - 05:00PM</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="unit unit-spacing-xs">
+                  <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
+                  <div class="unit-body">
+                    <p>Sat: 08:00AM - 12:00PM</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="unit unit-spacing-xs">
+                  <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                  <div class="unit-body"><a class="link-location" href="https://www.google.com/maps/place/Carlos+Castillo+%26+Co./@14.0306369,-86.5694994,68m/data=!3m1!1e3!4m6!3m5!1s0x8f6e698755698335:0x590ab4ecb280fdbe!8m2!3d14.0306394!4d-86.5695127!16s%2Fg%2F11kj05s4s4" target="_blank">Edificio Astro 5to piso, Danlí, El Paraíso, Honduras</a></div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer-variant-2-bottom-panel">
+    <div class="container">
+      <!-- Rights-->
+      <div class="group-sm group-sm-justify">
+        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span> Carlos Castillo  Cigars & Co. </span>. All rights reserved
+        </p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+    </div>
+    
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+   
+  </body>
 </html>

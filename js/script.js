@@ -4,18 +4,27 @@ function showImage(imageUrl) {
 	mainImage.src = imageUrl;
   }
 
-  // Obtener los elementos del idioma y el contenido
+// Obtener los elementos del idioma y el contenido
 var languageToggle = document.getElementById('language-toggle');
 var languageMenu = document.getElementById('language-menu');
 var languageLinks = document.querySelectorAll('#language-menu a');
 var contenedoresTraducibles = document.querySelectorAll('.translate');
 var contenidoOriginal = {};
 
+// Obtener el idioma actual del almacenamiento local o establecerlo en 'en' por defecto
+var idiomaActual = localStorage.getItem('idioma') || 'en';
+
 // Guardar los textos originales de los contenedores traducibles
 contenedoresTraducibles.forEach(function(contenedor) {
   var id = contenedor.id;
   contenidoOriginal[id] = contenedor.innerHTML;
 });
+
+// Establecer el idioma actual en el interruptor de idioma
+languageToggle.value = idiomaActual;
+
+// Traducir al idioma actual al cargar la página
+cambiarIdioma(idiomaActual);
 
 // Manejar el cambio de idioma al hacer clic en los enlaces del menú
 languageLinks.forEach(function(link) {
@@ -29,22 +38,37 @@ languageLinks.forEach(function(link) {
 
 // Función para cambiar el idioma y actualizar los textos
 function cambiarIdioma(lang) {
+  if (lang === idiomaActual) {
+    return; // No hacer nada si el idioma no ha cambiado
+  }
+
+  idiomaActual = lang;
+  localStorage.setItem('idioma', lang); // Guardar el idioma actual en el almacenamiento local
+
   if (lang === 'en') {
     Object.keys(contenidoOriginal).forEach(function(id) {
       translateText(contenidoOriginal[id], 'es', 'en', function(translatedText) {
         document.getElementById(id).innerHTML = translatedText;
       });
     });
+    document.getElementById('current-flag').src = 'https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png';
+    document.getElementById('current-language').textContent = 'English';
   } else if (lang === 'es') {
     Object.keys(contenidoOriginal).forEach(function(id) {
-      document.getElementById(id).innerHTML = contenidoOriginal[id];
-    });
-  } else if (lang === 'zh-CN') {
-    Object.keys(contenidoOriginal).forEach(function(id) {
-      translateText(contenidoOriginal[id], 'es', 'zh-CN', function(translatedText) {
+      translateText(contenidoOriginal[id], 'en', 'es', function(translatedText) {
         document.getElementById(id).innerHTML = translatedText;
       });
     });
+    document.getElementById('current-flag').src = 'https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png';
+    document.getElementById('current-language').textContent = 'Español';
+  } else if (lang === 'zh-CN') {
+    Object.keys(contenidoOriginal).forEach(function(id) {
+      translateText(contenidoOriginal[id], 'en', 'zh-CN', function(translatedText) {
+        document.getElementById(id).innerHTML = translatedText;
+      });
+    });
+    document.getElementById('current-flag').src = 'https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png';
+    document.getElementById('current-language').textContent = '中文';
   }
 }
 
@@ -64,20 +88,25 @@ function translateText(text, sourceLang, targetLang, callback) {
     target: targetLang
   };
 
-  $.ajax({
-    url: url,
-    type: 'POST',
-    dataType: 'json',
-    data: data,
-    success: function(response) {
-      var translatedText = response.data.translations[0].translatedText;
-      callback(translatedText);
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
     },
-    error: function(error) {
+    body: JSON.stringify(data)
+  })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(result) {
+      var translatedText = result.data.translations[0].translatedText;
+      callback(translatedText);
+    })
+    .catch(function(error) {
       console.log('Error de traducción:', error);
-    }
-  });
+    });
 }
+
 
   
 (function () {
