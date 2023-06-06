@@ -7959,17 +7959,22 @@ html.tablet .ui-to-top {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 23px;
-}
-
-.project-hamburger-2 > span {
-	position: relative;
-	display: inline-block;
-	align-self: flex-end;
-	height: 2px;
-	width: 100%;
-	background: #151515;
-	transition: width .2s ease;
-}
+  }
+  
+  .project-hamburger-2 > span {
+	display: none;
+  }
+  
+  .project-hamburger-2:before {
+	content: '';
+	position: absolute;
+	top: 05px;
+	width: 30px;
+	height: 30px;
+	background: url(https://cdn.icon-icons.com/icons2/37/PNG/512/googletranslate_translate_3280.png);
+	background-size: contain;
+  background-repeat: no-repeat;
+  }
 
 .project-hamburger-2 > span::after {
 	position: absolute;
