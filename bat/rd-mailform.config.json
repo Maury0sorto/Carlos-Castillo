@@ -1,7 +1,7 @@
 {
   
   "useSmtp": true,
-  "host": "smtp.gmail.com",
+  "host": "smtp.oldmusicradio.net",
   "port": 587,
   "username": "enviarformulario@carloscastillo.company",
   "password": "@Grupoastro2023",
