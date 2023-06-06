@@ -56,3 +56,6 @@ function initGmailAPI() {
     });
   }
   
+  // Inicializa la API de Gmail al cargar la página
+  gapi.load('client:auth2', initGmailAPI);
+  
