@@ -1176,105 +1176,130 @@ function showImage(imageUrl) {
 
 
 
-// Obtener los elementos del idioma y el contenido
 var languageToggle = document.getElementById('language-toggle');
-var languageMenu = document.getElementById('language-menu');
-var languageLinks = document.querySelectorAll('#language-menu a');
-var contenedoresTraducibles = document.querySelectorAll('.translate');
-var contenidoOriginal = {};
+    var languageMenu = document.getElementById('language-menu');
+    var languageLinks = document.querySelectorAll('#language-menu a');
+    var contenedoresTraducibles = document.querySelectorAll('.translate');
+    var contenidoOriginal = {};
 
-// Obtener el idioma actual del almacenamiento local o establecerlo en 'en' por defecto
-var idiomaActual = localStorage.getItem('idioma') || 'en';
+    // Obtener el idioma actual del localStorage o establecerlo en 'en' por defecto
+    var idiomaActual = localStorage.getItem('idioma') || 'en';
 
-// Guardar los textos originales de los contenedores traducibles
-contenedoresTraducibles.forEach(function(contenedor) {
-  var id = contenedor.id;
-  contenidoOriginal[id] = contenedor.innerHTML;
-});
+    // Guardar los textos originales de los contenedores traducibles
+    contenedoresTraducibles.forEach(function(contenedor) {
+      var id = contenedor.id;
+      contenidoOriginal[id] = contenedor.innerHTML;
+    });
 
-// Establecer el idioma actual en el interruptor de idioma
-languageToggle.value = idiomaActual;
+    // Establecer el idioma actual en el interruptor de idioma
+    languageToggle.value = idiomaActual;
 
-// Traducir al idioma actual al cargar la página
-cambiarIdioma(idiomaActual);
+    // Traducir al idioma actual al cargar la página
+    cambiarIdioma(idiomaActual);
 
-// Manejar el cambio de idioma al hacer clic en los enlaces del menú
-languageLinks.forEach(function(link) {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    var lang = this.getAttribute('data-lang');
-    cambiarIdioma(lang);
-    closeLanguageMenu();
-  });
-});
-
-// Función para cambiar el idioma y actualizar los textos
-function cambiarIdioma(lang) {
-  if (lang === idiomaActual) {
-    return; // No hacer nada si el idioma no ha cambiado
-  }
-
-  idiomaActual = lang;
-  localStorage.setItem('idioma', lang); // Guardar el idioma actual en el almacenamiento local
-
-  if (lang === 'en') {
-    Object.keys(contenidoOriginal).forEach(function(id) {
-      translateText(contenidoOriginal[id], 'es', 'en', function(translatedText) {
-        document.getElementById(id).innerHTML = translatedText;
+    // Manejar el cambio de idioma al hacer clic en los enlaces del menú
+    languageLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var lang = this.getAttribute('data-lang');
+        cambiarIdioma(lang);
+        closeLanguageMenu();
       });
     });
-    document.getElementById('current-flag').src = 'https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png';
-    document.getElementById('current-language').textContent = 'English';
-  } else if (lang === 'es') {
-    Object.keys(contenidoOriginal).forEach(function(id) {
-      translateText(contenidoOriginal[id], 'en', 'es', function(translatedText) {
-        document.getElementById(id).innerHTML = translatedText;
+
+    // Función para cambiar el idioma y actualizar los textos
+    function cambiarIdioma(lang) {
+      if (lang === idiomaActual) {
+        return; // No hacer nada si el idioma no ha cambiado
+      }
+
+      idiomaActual = lang;
+      localStorage.setItem('idioma', lang); // Guardar el idioma actual en el localStorage
+
+      // Actualizar la representación del idioma en el menú desplegable
+      var selectedLanguage = document.querySelector('.dropdown-label span');
+      selectedLanguage.textContent = idiomaActual.toUpperCase();
+
+      // Actualizar el ícono del idioma en el menú desplegable
+      var selectedIcon = document.querySelector('.dropdown-label img');
+      selectedIcon.src = obtenerRutaImagenIdioma(lang);
+
+      // Actualizar la representación del idioma actual y su ícono en el encabezado
+      var currentFlag = document.getElementById('current-flag');
+      var currentLanguage = document.getElementById('current-language');
+      currentFlag.src = obtenerRutaBanderaIdioma(lang);
+      currentLanguage.textContent = obtenerNombreIdioma(lang);
+
+      // Traducir los contenedores traducibles al nuevo idioma
+      Object.keys(contenidoOriginal).forEach(function(id) {
+        translateText(contenidoOriginal[id], 'en', lang, function(translatedText) {
+          document.getElementById(id).innerHTML = translatedText;
+        });
       });
-    });
-    document.getElementById('current-flag').src = 'https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png';
-    document.getElementById('current-language').textContent = 'Español';
-  } else if (lang === 'zh-CN') {
-    Object.keys(contenidoOriginal).forEach(function(id) {
-      translateText(contenidoOriginal[id], 'en', 'zh-CN', function(translatedText) {
-        document.getElementById(id).innerHTML = translatedText;
+
+      // Enviar un mensaje de cambio de idioma a otras pestañas
+      window.postMessage({ type: 'language-change', language: lang }, '*');
+    }
+
+    // Función para cerrar el menú desplegable
+    function closeLanguageMenu() {
+      languageToggle.checked = false;
+    }
+
+    // Función para obtener la ruta de la imagen del idioma según el idioma seleccionado
+    function obtenerRutaImagenIdioma(lang) {
+      if (lang === 'en') {
+        return 'https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png'; // Reemplaza 'ruta_de_la_imagen_del_idioma_ingles' con la ruta real de la imagen del idioma inglés
+      } else if (lang === 'es') {
+        return 'https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png'; // Reemplaza 'ruta_de_la_imagen_del_idioma_espanol' con la ruta real de la imagen del idioma español
+      } else if (lang === 'zh-CN') {
+        return 'https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png'; // Reemplaza 'ruta_de_la_imagen_del_idioma_chino' con la ruta real de la imagen del idioma chino
+      }
+    }
+
+  
+    // Función para obtener el nombre del idioma según el idioma seleccionado
+    function obtenerNombreIdioma(lang) {
+      if (lang === 'en') {
+        return 'English';
+      } else if (lang === 'es') {
+        return 'Español';
+      } else if (lang === 'zh-CN') {
+        return '中文';
+      }
+    }
+
+    // Función para traducir el texto de un idioma a otro utilizando la API de Google Translate
+    function translateText(text, sourceLang, targetLang, callback) {
+      var apiKey = 'AIzaSyCAmC5j9j0_xS7CSjyI3Tqcy47NqYf3jBI'; // Reemplaza 'tu_clave_de_API_de_Google_Translate' con tu propia clave de API de Google Translate válida
+      var url = 'https://translation.googleapis.com/language/translate/v2?key=' + apiKey;
+      var data = {
+        q: text,
+        source: sourceLang,
+        target: targetLang
+      };
+
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.data && data.data.translations && data.data.translations.length > 0) {
+          callback(data.data.translations[0].translatedText);
+        } else {
+          callback(text);
+        }
+      })
+      .catch(error => {
+        console.log('Error:', error);
+        callback(text);
       });
-    });
-    document.getElementById('current-flag').src = 'https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png';
-    document.getElementById('current-language').textContent = '中文';
-  }
-}
+    }
 
-// Función para cerrar el menú desplegable
-function closeLanguageMenu() {
-  languageToggle.checked = false;
-}
 
-// Función para traducir el texto de un idioma a otro utilizando la API de Google Translate
-function translateText(text, sourceLang, targetLang, callback) {
-  var apiKey = 'AIzaSyCAmC5j9j0_xS7CSjyI3Tqcy47NqYf3jBI'; // Reemplaza "TU_API_KEY" con tu propia clave de API de Google Translate
 
-  var url = 'https://translation.googleapis.com/language/translate/v2?key=' + apiKey;
-  var data = {
-    q: text,
-    source: sourceLang,
-    target: targetLang
-  };
-
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(result) {
-      var translatedText = result.data.translations[0].translatedText;
-      callback(translatedText);
-    })
-    .catch(function(error) {
-      console.log('Error de traducción:', error);
-    });
-}
+	////////////////////////
