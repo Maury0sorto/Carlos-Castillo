@@ -1,8 +1,10 @@
 {
+  
   "useSmtp": true,
-  "host": "stmp.gmail.com",
-  "port": 465,
-  "username": "toxicityhnd@gmail.com",
-  "password": "Ciudaddetoxicos2022",
-  "recipientEmail": "de_cruzn@unicah.edu"
+  "host": "smtp.oldmusicradio.net",
+  "port": 21,
+  "username": "enviarformulario@carloscastillo.company",
+  "password": "@Grupoastro2023",
+  "recipientEmail": "recibidosformulario@carloscastillo.company"
 }
+
