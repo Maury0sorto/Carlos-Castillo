@@ -9631,6 +9631,10 @@ html.rd-navbar-fixed-linked .page {
 .swiper-slider-modern .slider-modern-box {
 	max-width: 570px;
 }
+.swiper-slider-modern .slider-modern-box2 {
+	
+	max-width: 100%;
+}
 
 .swiper-slider-modern .slider-modern-title {
 	letter-spacing: .003em;
@@ -13240,4 +13244,7 @@ html .box-icon-ruby-body2 > * {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: #000000;
 	
+  } 
+  .contenido{
+	font-size: 15px;
   }
