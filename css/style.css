@@ -7851,7 +7851,7 @@ html.tablet .ui-to-top {
 	align-self: center;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 23px;
+	height: 100px;
 }
 
 .project-hamburger > span {
@@ -7861,36 +7861,18 @@ html.tablet .ui-to-top {
 	background: #151515;
 }
 
-.project-hamburger-arrow-top {
-	width: 100%;
-	transition: opacity .15s ease-in-out .3s;
+.project-hamburger:before {
+	content: '';
+	display: block;
+	width: 35px;
+	height: 35px;
+	background-image: url(https://cdn.icon-icons.com/icons2/37/PNG/512/googletranslate_translate_3280.png);
+	background-size: cover;
+	margin-top: -7px; /* Ajusta el margen superior según sea necesario */
 }
 
-.project-hamburger-arrow-center {
-	width: 80%;
-	transition: all .16s ease-in-out, opacity .15s ease-in-out .4s;
-}
 
-.project-hamburger-arrow-bottom {
-	width: 60%;
-	transition: all .32s ease-in-out, opacity .15s ease-in-out .5s;
-}
 
-.project-hamburger:hover > span {
-	width: 100%;
-}
-
-.project-hamburger:hover .project-hamburger-arrow-top {
-	animation: burger-hover .8s infinite ease-in-out alternate;
-}
-
-.project-hamburger:hover .project-hamburger-arrow-center {
-	animation: burger-hover .8s infinite ease-in-out alternate forwards .16s;
-}
-
-.project-hamburger:hover .project-hamburger-arrow-bottom {
-	animation: burger-hover .8s infinite ease-in-out alternate forwards .32s;
-}
 
 @keyframes burger-hover {
 	0% {
@@ -8004,20 +7986,28 @@ html.tablet .ui-to-top {
 .project-hamburger-3 {
 	display: flex;
 	overflow: hidden;
-	align-items: center;
+	align-self: center;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 16px;
-}
-
-.project-hamburger-3 > span {
-	position: relative;
-	display: inline-block;
-	height: 2px;
-	width: 100%;
-	background: #ffffff;
-	transition: width .2s ease .3s;
-}
+	height: 23px;
+  }
+  
+  .project-hamburger-3 > span {
+	display: none;
+  }
+  
+  .project-hamburger-3:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	background: url(https://cdn.icon-icons.com/icons2/37/PNG/512/googletranslate_translate_3280.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+  }
+  
 
 .rd-navbar-project-hamburger.active .project-hamburger > span {
 	opacity: 0;
