@@ -8864,7 +8864,7 @@ html.rd-navbar-fixed-linked .page {
 	color: #ffffff;
 	transition: all .5s ease;
 }
-
+/*tres barritas*/
 .rd-navbar-modern.rd-navbar-static .rd-navbar-project-hamburger {
 	position: relative;
 	width: 28px;
@@ -8928,6 +8928,8 @@ html.rd-navbar-fixed-linked .page {
 	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.37);
 	z-index: 1030;
 }
+
+
 
 .rd-navbar-project-content {
 	overflow-y: auto;
@@ -9008,7 +9010,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .rd-navbar-project-modern-title {
-	letter-spacing: .05em;
+	letter-spacing: 5px;
 	margin-top: 5px;
 }
 
@@ -13176,3 +13178,66 @@ html .box-icon-ruby-body2 > * {
 
 
 /* ************************* */
+.dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-toggle {
+	display: none;
+  }
+  
+  .dropdown-label {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #fffafa00;
+	border: none;
+	cursor: pointer;
+	position: relative;
+  }
+  
+  .dropdown-label img {
+	width: 45px;
+	height: 45px;
+	margin-right: 40px;
+  }
+  
+  .dropdown-label span {
+	margin-right: -10px;
+  }
+  
+  .dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color:#A9A9A9;
+	
+	border: 1px solid #ccc;
+  }
+  
+  .dropdown-menu li {
+	padding: 8px 16px;
+  }
+  
+  .dropdown-menu li:hover {
+	background-color: #aa6c39;
+  }
+  
+  .dropdown-toggle:checked + .dropdown-label + .dropdown-menu {
+	display: block;
+  }
+
+  
+
+  .listaidioma a{
+	font-size: 25px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: #000000;
+	
+  }
