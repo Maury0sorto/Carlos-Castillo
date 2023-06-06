@@ -12648,11 +12648,12 @@ html .box-icon-ruby-body2 > * {
 /* Estilos generales para los botones */
 .boton {
 	display: inline-block;
-	padding: 30px 70px;
+	padding: 30px 60px;
+	margin-right: 10px;
 	background-color: #a57650;
 	color: #fff;
 	text-decoration: none;
-	border-radius: 4px;
+	border-radius: 12px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
@@ -12676,6 +12677,8 @@ html .box-icon-ruby-body2 > * {
   }
   
 
+
+
   @media (max-width: 1199px) {
 	.boton {
 	  font-size: 16px;
@@ -12692,6 +12695,15 @@ html .box-icon-ruby-body2 > * {
 	  padding: 8px 16px;
 	}
 }
+
+@media (max-width: 767px) {
+	
+
+	.boton {
+	  font-size: 10px;
+	  padding: 6px 16px;
+	}
+} 
   @media (max-width: 534px) {
 	  .boton {
 
