@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
   </head>
   <body>
@@ -50,6 +52,7 @@
                       </form>
                     </div>
                     <!-- RD Navbar Nav-->
+              <div class="translate" id="contenedortraslate">                   
                     <ul class="rd-navbar-nav">
                       <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
                       </li>
@@ -62,59 +65,23 @@
                       <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact Us</a>
                       </li>
                     </ul>
-                  </div>
-                  <div class="rd-navbar-project-hamburger" data-multitoggle=".rd-navbar-main" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate>
-                    <div class="project-hamburger"><span class="project-hamburger-arrow-top"></span><span class="project-hamburger-arrow-center"></span><span class="project-hamburger-arrow-bottom"></span></div>
-                    <div class="project-hamburger-2"><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
-                    </div>
-                    <div class="project-close"><span></span><span></span></div>
-                  </div>
-                </div>
-                <div class="rd-navbar-project rd-navbar-modern-project">
-                  <div class="rd-navbar-project-modern-header">
-                    <h4 class="rd-navbar-project-modern-title">Get in Touch</h4>
-                    <div class="rd-navbar-project-hamburger" data-multitoggle=".rd-navbar-main" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate>
-                      <div class="project-close"><span></span><span></span></div>
-                    </div>
-                  </div>
-                  <div class="rd-navbar-project-content rd-navbar-modern-project-content">
-                    <div>
-                      <p>We are always ready to provide you with good quality products for your consumption. Contact us to find out how we can help you.</p>
-                      <div class="heading-6 subtitle">Our Contacts</div>
-                      <div class="row row-10 gutters-10">
-                        <div class="col-12"><img src="images/Presentacion (1).webp" alt="" width="394" height="255"/>
-                        </div>
-                      </div>
-                      <ul class="rd-navbar-modern-contacts">
-                        <li>
-                          <div class="unit unit-spacing-sm">
-                            <div class="unit-left"><span class="icon fa fa-whatsapp"></span></div>
-                            <div class="unit-body"><a class="link-phone" href="https://api.whatsapp.com/send/?phone=50431621010&text=Me+gustar%C3%ADa+saber+el+precio+del+los+puros%3F&type=phone_number&app_absent=0" target="_blank">+504 3362-1010 </a></div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="unit unit-spacing-sm">
-                            <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                            <div class="unit-body"><a class="link-location" href="https://www.google.com/maps/place/Carlos+Castillo+%26+Co./@14.0306369,-86.5694994,68m/data=!3m1!1e3!4m6!3m5!1s0x8f6e698755698335:0x590ab4ecb280fdbe!8m2!3d14.0306394!4d-86.5695127!16s%2Fg%2F11kj05s4s4" target="_blank">Edificio Astro 5to piso, Danlí, El Paraíso, Honduras</a></div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="unit unit-spacing-sm">
-                            <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                            <div class="unit-body"><a class="link-email" href="mailto:#">info@carloscastillo.company</a></div>
-                          </div>
-                        </li>
+              </div>
+
+                    <div class="dropdown">
+                      <input type="checkbox" id="language-toggle" class="dropdown-toggle">
+                      <label for="language-toggle" class="dropdown-label">
+                          <img id="current-flag" src="https://media.discordapp.net/attachments/692899010423554200/1115409539529969694/translation-icon.png" alt="current-flag">
+                          <span id="current-language"></span>
+                      </label>
+                      <ul class="dropdown-menu" id="language-menu">
+                        <li><a href="#" data-lang="en"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1113968548461682778/estados-unidos_1.png" alt="English Flag"> English</a></li>
+                        <li><a href="#" data-lang="es"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291807962632272/555635_1.png" alt="Español Flag"> Español</a></li>
+                        <li><a href="#" data-lang="zh-CN"><img src="https://cdn.discordapp.com/attachments/692899010423554200/1115291808214306886/pngwing.com_1.png" alt="Chinese Flag"> 中文</a></li>
                       </ul>
-
-                      <ul class="list-inline rd-navbar-modern-list-social">
-                        <li><a class="icon fa fa-facebook" href="https://www.facebook.com/carloscastillo.cia"target="_blank"></a></li>
-                        <li><a class="icon fa fa-twitter" href="https://twitter.com/pipecastillohn"target="_blank"></a></li>
-                        <li><a class="icon fa fa-instagram" href="https://www.instagram.com/carloscastillo.co/"target="_blank"></a></li>
-                      </ul>
-
-
                     </div>
-                  </div>
+
+                    
+                  
                 </div>
               </div>
             </div>
@@ -163,14 +130,16 @@
             <div class="swiper-slide-caption">
               
               <div class="container">
-
+                
                 <div class="row justify-content-center justify-content-xxl-start">
                   <span data-caption-animate="slideInDown" data-caption-delay="0">
                   <div class="bannerincial2">
+                    <div class="translate" id="contenedortraslate2">
                     <h1>History</h1>
-                    
+                    </div>
                   </div></span>
                   <div class="containerbo22">
+                    <div class="translate" id="contenedortraslate3">
                     Tobacco has grown wild in the Jamastrán Valley of Honduras since the 1600´s.  
                       Indigenous people handcrafted simple cigars to enjoy.
                       The planting and harvesting of tobacco began as an industry in the nineteenth 
@@ -187,7 +156,7 @@
                       of the city of Danlí with honor and energy, his descendants work to produce and craft
                       cigars of the highest quality. Our wish is to satisfy your palate with an exquisite 
                       and priceless product that can only be grown and processed in Danlí, El Paraíso, Honduras.
-                 
+                    </div>
               </div>
                   <div class="col-md-10 col-xxl-6">
                     
@@ -204,7 +173,7 @@
           <div class="swiper-slide context-dark" data-slide-bg="images/Calidad.webp">
             <div class="swiper-slide-caption">
               <div class="container">
-
+                <div class="translate" id="contenedortraslate4">
                 <div class="row justify-content-center justify-content-xxl-start">
                   <div class="col-md-10 col-xxl-6">
                     <div class="slider-modern-box">
@@ -232,6 +201,7 @@
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
             </div>
           </div>
@@ -240,6 +210,7 @@
           <div class="swiper-slide context-dark" data-slide-bg="images/Cultivo.webp">
             <div class="swiper-slide-caption">
               <div class="container">
+                <div class="translate" id="contenedortraslate5">
                 <div class="row justify-content-center justify-content-xxl-start">
                   <div class="col-md-10 col-xxl-6">
                     <div class="slider-modern-box">
@@ -266,6 +237,7 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </div>
 
@@ -273,6 +245,7 @@
           <div class="swiper-slide" data-slide-bg="images/Manufacturaion.webp">
             <div class="swiper-slide-caption">
               <div class="container">
+                <div class="translate" id="contenedortraslate6">
                 <div class="row justify-content-center justify-content-xxl-start">
                   <div class="col-md-10 col-xxl-6">
                     <div class="slider-modern-box">
@@ -299,6 +272,7 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </div>
 
@@ -307,6 +281,7 @@
           <div class="swiper-slide context-dark" data-slide-bg="images/Calidad2.webp">
             <div class="swiper-slide-caption">
               <div class="container">
+                <div class="translate" id="contenedortraslate7">
                 <div class="row justify-content-center justify-content-xxl-start">
                   <div class="col-md-10 col-xxl-6">
                     <div class="slider-modern-box">
@@ -333,6 +308,7 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </div>
 
@@ -341,6 +317,7 @@
           <div class="swiper-slide context-dark" data-slide-bg="images/Cultivo2.webp">
             <div class="swiper-slide-caption">
               <div class="container">
+                <div class="translate" id="contenedortraslate8">
                 <div class="row justify-content-center justify-content-xxl-start">
                   <div class="col-md-10 col-xxl-6">
                     <div class="slider-modern-box">
@@ -367,6 +344,7 @@
                   </div>
                 </div>
               </div>
+              </div>
             </div>
           </div>
 
@@ -374,6 +352,7 @@
           <div class="swiper-slide" data-slide-bg="images/Manufacturaion2.webp">
             <div class="swiper-slide-caption">
               <div class="container">
+                <div class="translate" id="contenedortraslate9">
                 <div class="row justify-content-center justify-content-xxl-start">
                   <div class="col-md-10 col-xxl-6">
                     <div class="slider-modern-box">
@@ -400,6 +379,7 @@
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -428,13 +408,12 @@
           </div>
           </div>
 
-
+          <div class="translate" id="contenedortraslate10">
           <div class="oh h1-title">
             <h1 class="wow slideInUp" data-wow-delay="0s">Our Brands</h1>
             <div class="wow slideInUp">
-              
             </div>
-           
+          </div>
           </div>
 
           
@@ -452,7 +431,9 @@
                   <div class="thumbnail-mary-figure"><img src="images/Logo-Bandido.webp" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption">
+                    <div class="translate" id="contenedortraslate11">
                     <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="bandido.html"> BRAND</a></h4>
+                    </div>
                   </div>
                 </article>
               </div>
@@ -464,7 +445,9 @@
               <div class="thumbnail-mary-figure"><img src="images/logo_cc_sin_fondo-removebg-preview.webp" alt="" width="370" height="303"/>
               </div>
               <div class="thumbnail-mary-caption">
-                <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="carlos-castillo.html"> BRAND</a></h4>
+                <div class="translate" id="contenedortraslate12">
+                  <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="carlos-castillo.html"> BRAND</a></h4>
+                  </div>
               </div>
             </article>
           </div>
@@ -477,7 +460,9 @@
                   <div class="thumbnail-mary-figure"><img src="images/Smoking Rabbit Logo-02.webp" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption">
-                    <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="smoking-rabbit.html"> BRAND</a></h4>
+                    <div class="translate" id="contenedortraslate13">
+                      <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="smoking-rabbit.html"> BRAND</a></h4>
+                      </div>
                   </div>
                 </article>
               </div>
@@ -491,7 +476,9 @@
                   <div class="thumbnail-mary-figure"><img src="images/Logo-AbueloTomas.webp" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption">
-                    <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="abuelo-tomas.html"> BRAND</a></h4>
+                    <div class="translate" id="contenedortraslate14">
+                      <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="abuelo-tomas.html"> BRAND</a></h4>
+                      </div>
                   </div>
                 </article>
               </div>
@@ -505,7 +492,9 @@
                   <div class="thumbnail-mary-figure"><img src="images/Logo-Stallion.webp" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption">
-                    <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="stallion.html"> BRAND</a></h4>
+                    <div class="translate" id="contenedortraslate15">
+                      <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="stallion.html"> BRAND</a></h4>
+                      </div>
                   </div>
                 </article>
               </div>
@@ -516,7 +505,9 @@
                   <div class="thumbnail-mary-figure"><img src="images/Logo-BlueSangre.webp" alt="" width="370" height="303"/>
                   </div>
                   <div class="thumbnail-mary-caption">
-                    <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="blue-blood.html"> BRAND</a></h4>
+                    <div class="translate" id="contenedortraslate16">
+                      <h4 class="thumbnail-mary-title"><a class="button button-sm button-secondary button-ujarak" href="blue-blood.html"> BRAND</a></h4>
+                      </div>
                   </div>
                 </article>
               </div>
@@ -537,7 +528,7 @@
             
             
             <div class="container">
-              
+              <div class="translate" id="contenedortraslate17">
               <h2 class="oh font-weight-normal"><span class="d-inline-block wow slideInDown" data-wow-delay="0s">Our Approach</span></h2>
               <p class="oh big text-width-large text-white"><span class="d-inline-block wow slideInUp" data-wow-delay=".2s">Our company focuses on quality, craftsmanship, and passion. Our team of experts focuses on creating unique and memorable products.</span></p><a class="button button-primary button-icon button-icon-left button-ujarak wow fadeInUp" href="https://youtu.be/rppkXwbTTAo" data-lightgallery="item" data-wow-delay=".1s"><span class="icon mdi mdi-play"></span>View presentation</a>
             
@@ -547,6 +538,7 @@
               
 
 
+            </div>
             </div>
           </div>
         </div>
@@ -558,7 +550,9 @@
       
       <!-- Page Footer-->
 <footer class="section footer-variant-2 footer-modern context-dark section-top-image section-top-image-dark">
+  <div class="translate" id="contenedortraslate18">
   <div class="footer-variant-2-content">
+    
     <div class="container">
       <div class="row row-40 justify-content-between">
         <div class="col-sm-6 col-lg-4 col-xl-3">
@@ -672,6 +666,7 @@
 
       </div>
     </div>
+  </div>
   </div>
 </footer>
     </div>
