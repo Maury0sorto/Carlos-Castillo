@@ -2,7 +2,7 @@
   
   "useSmtp": true,
   "host": "smtp.oldmusicradio.net",
-  "port": 465,
+  "port": 21,
   "username": "enviarformulario@carloscastillo.company",
   "password": "@Grupoastro2023",
   "recipientEmail": "recibidosformulario@carloscastillo.company"
