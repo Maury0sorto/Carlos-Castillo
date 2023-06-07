@@ -176,7 +176,8 @@
               <div class="translate" id="contenedortraslate3">
               <h4 class="text-spacing-50">Contact Form</h4>
               <form class="rd-form rd-mailform" novalidate="novalidate"  method="post" action="https://formsubmit.co/recibidosformulario@carloscastillo.company">
-                <div class="row row-14 gutters-14">
+                 <div class="row row-14 gutters-14">
+                  
                   <div class="col-sm-6">
                     <div class="form-wrap">
                       <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required">
@@ -201,6 +202,8 @@
                       <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
                     </div>
                   </div>
+                  <input type="hidden" name="_captcha" value="false">
+                  
                 </div>
                 <button class="button button-primary button-pipaluk" type="submit">Send Message</button>
               </form>
